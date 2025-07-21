@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LeetCode Gemini Explainer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: #1e0565;
+      }
+      .font-fira-code {
+        font-family: 'Fira Code', monospace;
+      }
+      /* Custom scrollbar for code blocks if needed */
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: #1e1b4b; /* dark indigo */
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #4338ca; /* indigo-700 */
+        border-radius: 4px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #4f46e5; /* indigo-600 */
+      }
+      .mermaid svg { /* Ensure Mermaid SVGs scale correctly */
+        max-width: 100%;
+        max-height: 100%; /* Add this to ensure tall diagrams also fit */
+        height: auto; 
+      }
+
+      /* Floating Emoji Animations */
+      .emoji-float {
+        position: absolute;
+        opacity: 0.15; /* Subtle opacity */
+        user-select: none;
+        animation-name: float;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes float {
+        0% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+        25% { transform: translateY(-15px) translateX(10px) rotate(5deg); }
+        50% { transform: translateY(0px) translateX(-10px) rotate(0deg); }
+        75% { transform: translateY(15px) translateX(5px) rotate(-5deg); }
+        100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.6.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="text-yellow-300 selection:bg-yellow-400 selection:text-indigo-950">
+    <div id="root"></div>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+      mermaid.initialize({ startOnLoad: false, theme: 'dark', darkMode: true, /*fontFamily: '"Inter", sans-serif'*/ });
+    </script>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

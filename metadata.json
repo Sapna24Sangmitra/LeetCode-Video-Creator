@@ -1,0 +1,6 @@
+{
+  "name": "LeetCode Gemini Explainer",
+  "description": "An application that takes a LeetCode problem and user solution, then generates a slideshow-style explanation voiced by Gemini, breaking down the problem and solution step-by-step.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
